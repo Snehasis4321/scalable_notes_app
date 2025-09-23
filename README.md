@@ -25,7 +25,7 @@ This is a full-stack serverless note-taking application using React.js for the f
 
 - Node.js
 - pnpm
-- An AWS account with configured credentials
+- An AWS account with configured credentials (applied using aws cli)
 
 ### Backend Setup
 
