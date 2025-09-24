@@ -26,7 +26,6 @@ function App() {
           path="/"
           element={
             <>
-              (
               {auth.isLoading && (
                 <div className="w-screen h-screen flex items-center justify-center">
                   <BounceLoader color="blue" />
@@ -37,7 +36,6 @@ function App() {
               {!auth.isAuthenticated && !auth.error && !auth.isLoading && (
                 <LandingPage />
               )}
-              )
             </>
           }
         />
