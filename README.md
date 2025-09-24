@@ -1,3 +1,7 @@
+
+![scalable-notes-app2](https://github.com/user-attachments/assets/232646b8-ce14-4f99-a511-e9a6f052fc60)
+## ![🔗Watch Tutorial Here](https://youtu.be/G3I8mdc_fPI)
+
 # Scalable Notes App
 
 This is a full-stack serverless note-taking application using React.js for the frontend and a Node.js backend powered by AWS services.
