@@ -22,7 +22,7 @@ export const createNote = async (req, res) => {
     const noteId = randomUUID();
     const currentTime = new Date().toISOString();
     const shareUrl = isPublic
-      ? `${"http://localhost:5173"}/shared/${noteId}`
+      ? `${process.env.FRONTEND_URL}/shared/${noteId}`
       : null;
 
     const noteItem = {
@@ -116,7 +116,7 @@ export const updateNote = async (req, res) => {
 
     const currentTime = new Date().toISOString();
     const shareUrl = isPublic
-      ? `${"http://localhost:5173"}/shared/${noteId}`
+      ? `${process.env.FRONTEND_URL}/shared/${noteId}`
       : null;
 
     const command = new UpdateCommand({

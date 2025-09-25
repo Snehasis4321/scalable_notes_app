@@ -12,7 +12,7 @@ const SharedPageNote = () => {
     const fetchSharedNote = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/notes/shared/${noteId}`
+          `${import.meta.env.VITE_BACKEND_URL}/notes/shared/${noteId}`
         );
         if (!response.ok) {
           throw new Error("Note not found or not public");

@@ -21,7 +21,7 @@ const NotesPage = ({ auth }) => {
 
   const signOutRedirect = () => {
     const clientId = "1v6mehug6e7kmshsmqjq5035c0";
-    const logoutUri = "http://localhost:5173/";
+    const logoutUri = `${import.meta.env.VITE_FRONTEND_URL}/`;
     const cognitoDomain =
       "https://ap-south-19wws0ipni.auth.ap-south-1.amazoncognito.com";
     auth.removeUser();
@@ -32,7 +32,7 @@ const NotesPage = ({ auth }) => {
 
   const deleteNote = async (noteId) => {
     try {
-      const response = await fetch(`http://localhost:3000/notes/${noteId}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/notes/${noteId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${auth.user.access_token}`,
@@ -88,7 +88,7 @@ const NotesPage = ({ auth }) => {
         qs.set("limit", "12");
         if (useKey) qs.set("nextKey", useKey);
         const response = await fetch(
-          `http://localhost:3000/notes?${qs.toString()}`,
+          `${import.meta.env.VITE_BACKEND_URL}/notes?${qs.toString()}`,
           {
             headers: {
               Authorization: `Bearer ${auth.user.access_token}`,
@@ -117,8 +117,8 @@ const NotesPage = ({ auth }) => {
 
     const method = noteToEdit ? "PUT" : "POST";
     const url = noteToEdit
-      ? `http://localhost:3000/notes/${noteToEdit.noteId}`
-      : "http://localhost:3000/notes";
+      ? `${import.meta.env.VITE_BACKEND_URL}/notes/${noteToEdit.noteId}`
+      : `${import.meta.env.VITE_BACKEND_URL}/notes`;
 
     try {
       const response = await fetch(url, {

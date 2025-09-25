@@ -8,7 +8,7 @@ const cognitoAuthConfig = {
   authority:
     "https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_9wws0IpNi",
   client_id: "1v6mehug6e7kmshsmqjq5035c0",
-  redirect_uri: "http://localhost:5173/",
+  redirect_uri: `${import.meta.env.VITE_FRONTEND_URL}/`,
   response_type: "code",
   scope: "aws.cognito.signin.user.admin email openid phone",
 };

@@ -1,6 +1,26 @@
-
 ![scalable-notes-app2](https://github.com/user-attachments/assets/232646b8-ce14-4f99-a511-e9a6f052fc60)
+
 ## ![🔗Watch Tutorial Here](https://youtu.be/G3I8mdc_fPI)
+
+ℹ️ This was not showed in the tutorial
+please add
+in `notes_app_backend/.env`
+
+```
+PORT=3000
+FRONTEND_URL=http://localhost:5173
+```
+
+and in `notes_app_react/.env`
+
+```
+VITE_FRONTEND_URL=http://localhost:5173
+VITE_BACKEND_URL=http://localhost:3000
+```
+
+### Environment Variables
+
+The application uses environment variables for configuration instead of hardcoded URLs. Create `.env` files in both backend and frontend directories as described in their respective setup sections.
 
 # Scalable Notes App
 
@@ -37,11 +57,16 @@ This is a full-stack serverless note-taking application using React.js for the f
     ```bash
     cd notes_app_backend
     ```
-2.  Install the dependencies:
+2.  Create a `.env` file with the following variables:
+    ```env
+    PORT=3000
+    FRONTEND_URL=http://localhost:5173
+    ```
+3.  Install the dependencies:
     ```bash
     pnpm install
     ```
-3.  Start the backend server:
+4.  Start the backend server:
     ```bash
     pnpm start
     ```
@@ -52,11 +77,16 @@ This is a full-stack serverless note-taking application using React.js for the f
     ```bash
     cd notes_app_react
     ```
-2.  Install the dependencies:
+2.  Create a `.env` file with the following variables:
+    ```env
+    VITE_FRONTEND_URL=http://localhost:5173
+    VITE_BACKEND_URL=http://localhost:3000
+    ```
+3.  Install the dependencies:
     ```bash
     pnpm install
     ```
-3.  Start the frontend development server:
+4.  Start the frontend development server:
     ```bash
     pnpm dev
     ```
