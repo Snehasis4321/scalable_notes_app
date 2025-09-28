@@ -26,8 +26,9 @@ const LandingPage = () => {
               <button
                 className="btn btn-outline"
                 onClick={() =>
-                  (window.location.href =
-                    "https://ap-south-19wws0ipni.auth.ap-south-1.amazoncognito.com/signup?client_id=1v6mehug6e7kmshsmqjq5035c0&code_challenge=rM4mJzbkf_YDO6Bo_B4IaYA9MVmGHED6nFAHjj-46F0&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2F&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone&state=2a4fa6e51b6e4751a051bc369596cbe7")
+                  auth.signinRedirect({
+                    extraQueryParams: "signup",
+                  })
                 }
               >
                 Sign Up
