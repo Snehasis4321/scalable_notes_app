@@ -43,7 +43,11 @@ const SharedPageNote = () => {
         <div className="navbar mb-6">
           <div className="flex-1">
             <div className="flex flex-row items-center">
-              <img src="../notes.png" alt="Notes Logo" className="w-10 h-10" />
+              <img
+                src="../../notes.png"
+                alt="Notes Logo"
+                className="w-10 h-10"
+              />
               <a className="mx-2 normal-case text-2xl font-bold">Notes App</a>
             </div>
           </div>
